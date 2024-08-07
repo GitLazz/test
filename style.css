@@ -1,0 +1,229 @@
+/* General styling */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6a1b9a;
+  padding: 30px;
+  /* Increased padding to make the header 3 times taller */
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.company-name {
+  margin: 0;
+  text-align: center;
+  flex-grow: 1;
+  font-size: 2.25em;
+  /* Font size for company name */
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.search-bar-container {
+  padding: 10px;
+  text-align: center;
+  background-color: #e1bee7;
+}
+
+.search-bar-container input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.product-heading {
+  text-align: center;
+  padding: 15px;
+  background-color: #ab47bc;
+  color: white;
+  font-size: 1.2em;
+  border-bottom-left-radius: 30px;
+  /* Rounded bottom-left corner */
+  border-bottom-right-radius: 30px;
+  /* Rounded bottom-right corner */
+}
+
+/* Image container styling */
+.image-container {
+  text-align: center;
+  margin: 20px 0;
+  /* Add margin to create space above and below the image */
+}
+
+.image-container img {
+  width: 200%;
+  /* Double the image width */
+  height: auto;
+  /* Maintain aspect ratio */
+  max-width: 80%;
+  /* Override any maximum width constraints */
+}
+
+/* Side menu styling */
+.side-menu {
+  position: fixed;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #8e24aa;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.side-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu ul li {
+  padding: 10px 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  display: block;
+  border-radius: 4px;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.side-menu ul li:hover {
+  background-color: #6a1b9a;
+}
+
+.side-menu ul li a:hover {
+  color: #e1bee7;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+  .company-name {
+    font-size: 1.8em;
+  }
+
+  .menu-icon {
+    font-size: 20px;
+  }
+}
+
+/* Contact info styling */
+/* .contact-info {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f3e5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info p {
+    margin: 5px 0;
+    color: #6a1b9a;
+    font-size: 1em;
+}
+
+.contact-info a {
+    color: #8e24aa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+} */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  gap: 10px; /* Space between contact items */
+  margin: 20px auto; /* Center the entire section */
+  padding: 10px;
+  background-color: #f3e5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 600px; /* Optional: Set a maximum width */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center; /* Center items vertically within each row */
+  gap: 10px; /* Space between icon and text */
+  width: 100%; /* Make each contact item take up the full width */
+}
+
+.contact-icon {
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 1em; /* Ensure consistent font size */
+  color: #6a1b9a; /* Text color */
+  flex-grow: 1; /* Allow text to take up remaining space */
+  display: flex;
+  align-items: center; /* Center text vertically */
+}
+
+.contact-item a {
+  color: #8e24aa; /* Link color */
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* Center link text vertically */
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .contact-info {
+    padding: 5px;
+  }
+
+  .contact-info p {
+    font-size: 0.9em;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.contact-icon {
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+  margin-right: 8px; /* Space between icon and text */
+  vertical-align: middle; /* Align icon with text */
+}
